@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/candado.png"
+<body>
+    
+    <header class="header">
+        <img class="header_logo" src="./images/logo.png" alt="logo de Alura">
+    </header>
+
+    <main class="contenido">
+        
+        <div class="contenido_entrada">
+            
+            <textarea class="contenido_entrada_texto" id="texto_entrada" placeholder="Escribe tu mensaje aquí"></textarea>
+            <p class="contenido_info"><img class="contenido_info_imagen" src="./images/info.png">Sólo letras minúsculas y sin acentos</p>
+            
+            <div class="contenido_entrada_botones">
+                <button onclick="encriptar()" class="boton_primario" id="encriptar">Encriptar</button>
+                <button onclick="desencriptar()" class="boton_primario" id="desencriptar">Desencriptar</button>
+                <button onclick="borrar_mensaje()" class="boton_secundario" id="borrar">Borrar mensaje</button>
+            </div>
+
+        </div>
+
+        <div class="contenido_salida">
+            
+            <div class="contenido_salida_vacio" id="salida_vacio">
+                <img class="contenido_salida_vacio_imagen" src="./images/buscar.png">
+                <p class="parrafo_grande">Ningún mensaje fue encontrado</p>
+                <p class="parrafo_mediano">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+
+            <div class="contenido_salida_lleno" id="salida_lleno">
+                <p class="contenido_salida_mensaje" id="salida_mensaje"></p>
+                <button onclick="copiar_resultado()" class="boton_terciario" id="boton_copiar" disabled>Copiar</button>
+            </div>         
+
+            <p class="contenido_info" id="revisar_info"><img class="contenido_info_imagen" src="./images/info.png">El mensaje fue modificado por contener letras mayúsculas y/o caracteres especiales</p>
+        
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+        <p>Creado por Eugenia Pavía Ruz, 2024</p>
+        <p class="parrafo_chico">
+            Iconos creados por Freepik - <a href="https://www.flaticon.es/">Flaticon</a><br>
+            Fondo de Pete Linforth - <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6285217">Pixabay</a>
+        </p>
+        
+        
+    </footer>
+
+    <script src="app.js" deref></script>
+
+</body>
+</html>

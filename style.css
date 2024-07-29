@@ -1,0 +1,357 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --color_primario: #3B93BC;
+    --color_secundario: #7BB5D0;
+    --color_fondo: rgba(255,255,255,0.75);
+    --color_texto_principal: black;
+    --color_texto_alternativo: white;
+    --fuente: "Ubuntu", sans-serif;
+    /* 300-light 400-normal 500-medium 700-bold*/
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    list-style-type: none;
+    height: 100vh;
+    background-image: url('./images/fondo.png');
+}
+
+
+/* @info Header */
+
+.header {
+    box-sizing: border-box;
+    height: 8vh;
+    margin: 2vh 40px;
+    padding-left: 2vw;
+
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    height: 60%;
+}
+
+
+/* @info Main */
+
+.contenido {
+    height: 75vh;
+    width: auto;
+    
+    margin: 2vh 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.contenido_entrada {
+    height: 100%;
+    width: 45%;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenido_entrada_texto {
+    box-sizing: border-box;
+    height: 60vh;
+    width: 45vw;
+    resize: none;
+
+    padding: 15px;
+    
+    font-family: var(--fuente);
+    font-size: 24px;
+    background-color: var(--color_fondo);
+    color: var(--color_texto_principal);
+    border-radius: 32px;
+}
+
+.contenido_salida {
+    height: 97%;
+    width: 45%;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido_salida_vacio, .contenido_salida_lleno {
+    background-color: var(--color_fondo);
+    border-radius: 32px;
+
+    box-sizing: border-box;
+    height: 90%;
+    width: 100%;
+    padding: 15px;
+}
+
+.contenido_salida_vacio {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    font-family: var(--fuente);
+    color: var(--color_texto_principal);
+}
+
+.contenido_salida_vacio_imagen {
+    width: 50%;
+}
+
+.parrafo_grande {
+    font-family: var(--fuente);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.parrafo_mediano {
+    font-family: var(--fuente);
+    font-size: 20px;
+    text-align: center;
+}
+
+.contenido_salida_lleno {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenido_salida_mensaje {
+    font-family: var(--fuente);
+    color: var(--color_texto_principal);
+    font-size: 24px;
+    text-align: left;
+
+    width: 100%;
+
+    overflow: auto;
+}
+
+
+/* @info Botones e información*/
+
+.contenido_info {
+    height: 1.5rem;
+    
+    font-family: var(--fuente);
+    font-size: 16px;
+    color: var(--color_texto_alternativo)
+
+}
+
+.contenido_info_imagen {
+    height: 60%;
+    padding: 0px 5px;
+}
+
+.contenido_entrada_botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.boton_primario, .boton_secundario, .boton_terciario {
+    height: 50px;
+    font-family: var(--fuente);
+    font-size: 18px;
+
+    border-radius: 25px;
+    color: var(--color_texto_alternativo);
+    border: none;
+}
+
+.boton_primario {
+    width: 30%;
+    background-color: var(--color_primario); 
+}
+
+.boton_secundario {
+    width: 40%;
+    background-color: var(--color_secundario);
+}
+
+.boton_terciario {
+    width: 60%;
+    background-color: var(--color_primario);   
+}
+
+.boton_primario:hover, .boton_terciario:hover {
+    color: var(--color_primario);
+    background-color: var(--color_fondo);
+}
+
+.boton_secundario:hover {
+    color: var(--color_secundario);
+    background-color: var(--color_fondo);
+}
+
+
+/* @info Footer */
+
+.footer {
+    height: 7vh;
+    width: auto;
+    padding: 1vh 20px;
+    box-sizing: content-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color_texto_alternativo);
+    background-color: var(--color_primario);
+    font-family: var(--fuente);
+    font-size: 16px;
+}
+
+.parrafo_chico {
+    text-align: right;
+}
+
+
+/* RESPONSIVIDAD */
+
+/* @info Dispositivos grandes */
+@media (max-width:1023px) {
+    .header {
+        height: 5vh;
+        padding-left: 1vw;
+    }
+    
+    .header_logo {
+        height: 70%;
+    }
+    
+    .contenido {
+        height: 80vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .contenido_entrada {
+        min-height: 45%;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .contenido_entrada_texto {
+        width: 100%;    
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .contenido_salida {
+        min-height: 45%;
+        width: 100%;
+        gap: 10px;
+    }
+      
+    .contenido_salida_vacio_imagen {
+        display: none;
+    }
+
+    .parrafo_grande {
+        font-size: 20px;
+    }
+    
+    .parrafo_mediano {
+        font-size: 18px;
+    }
+    
+    .contenido_salida_lleno {
+        height: 90%;
+    }
+    .contenido_salida_mensaje {
+        font-size: 20px;
+    }
+
+    .contenido_info {
+        font-size: 14px;
+    }
+
+    .boton_primario, .boton_secundario, .boton_terciario {
+        height: 40px;
+    }
+
+    .footer {
+        height: 5vh;
+        font-size: 14px;
+    }
+}
+
+/* @info Dispositivos medianos */
+@media (max-width:767px) {
+    .header {
+        height: 4vh;
+        padding-left: 0.5vw;
+    }
+    
+    .contenido_entrada_texto {
+        font-size: 18px;
+    }
+
+    .parrafo_grande {
+        font-size: 18px;
+    }
+    
+    .parrafo_mediano {
+        font-size: 16px;
+    }
+    
+    .contenido_salida_lleno {
+        height: 90%;
+    }
+    .contenido_salida_mensaje {
+        font-size: 18px;
+    }
+
+    .contenido_info {
+        font-size: 14px;
+    }
+
+    .boton_primario, .boton_secundario, .boton_terciario {
+        font-size: 16px;
+    }
+
+    .footer {
+        height: 6vh;
+        font-size: 12px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+/* @info Dispositivos pequeños */
+@media (max-width: 460px) {
+    .boton_primario, .boton_secundario, .boton_terciario {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .contenido_entrada_botones {
+        gap: 10px;
+    }
+}
